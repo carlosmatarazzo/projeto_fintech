@@ -1,0 +1,153 @@
+
+* {
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    font-family: Calibri;
+}
+
+/* formatação do cabeçalho, menu e título */
+/* -------------------------------------- */
+
+header {
+    background-color: white;
+    height: 60px; /*altura do cabeçalho*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0px 5px 10px 1px #aaaaaa;
+    z-index: 999;
+}
+
+#title {
+    flex-grow: 1;
+    margin-left: 20px;
+    text-align: left;
+    font-size: 30px;
+}
+
+#menu-icon {
+    cursor: pointer;
+}
+
+#menu-modal {
+    position: fixed;
+    top: 0;
+    left: -300px; /* Inicialmente fora da tela */
+    width: 150px;
+    height: 100%;
+    background-color: #c0bfbf;
+    box-shadow: 0px 5px 10px 1px black;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    padding-top: 0px; /* altura do texto dentro do modal */
+    opacity: 95%;
+    font-size: 20px;
+}
+
+#menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px;
+}
+
+#menu-list li {
+    padding: 10px;
+}
+
+#menu-list a {
+    color: black;
+}
+
+#menu-list a:hover {
+    color: white;
+    transition: color 0.3s ease, color 0.3s ease;
+}
+
+/* formatação do conteúdo da página */
+/* -------------------------------- */
+
+#content {
+    margin-top: 50px; /* Para evitar que o conteúdo fique oculto pelo cabeçalho fixo */
+    margin-bottom: 50px; /* Para evitar que o conteúdo fique oculto pelo rodapé fixo */
+}
+
+/* formatação ddo rodapé e botões */
+/* ------------------------------ */
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 0px;
+    box-shadow: 0px 5px 10px 1px black;
+}
+
+.button {
+    width: 50%; /* 48% para acomodar a margem entre os botões */
+    height: 60px; /* altura do rodapé */
+    background-color:white;
+    padding: 0px;
+    text-align: center;
+    cursor: pointer;
+    border-right:1px solid #aaaaaa;
+    border-left:1px solid #aaaaaa;
+    border-radius: 5px;
+    color: black; /* Definindo a cor inicial do texto */
+    font-size: 30px;
+}
+
+.button a {
+    width: 100%;
+    height: 100%;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px; 
+}
+
+.button:hover,
+.button:hover a {
+    background-color: black;
+    color: white; /* Alterando a cor do texto no estado de hover */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* formatação da lista de usuarios */
+/* ------------------------------- */
+
+.usuario {
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+    font-size: 30px;
+    color: black;
+}
+
+.usuario:hover {
+    background-color: black;
+    color: white;
+}
+
+.usuario:hover img {
+    filter: invert(100%);
+}
+
+.usuario-imagem {
+    width: 100px;
+    height: 100px;
+    margin-right: 0px;
+}
